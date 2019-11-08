@@ -4,8 +4,6 @@ from random import randint #Allows the generation of random numbers
 print ("----------------------Welcome Chifoumi Game-----------------------------\n-----------------------Hello how are you--------------------------------")
 print ("La régle du jeu est simple:\n- La pierre bat les ciseaux\n- La feuille bat la pierre\n- Les ciseaux battent la feuille")
 
-choix = ["1:pierre", "2:feuille", "3:ciseaux"]
-
 user1 = input("Veuillez entrer votre prénom ").upper() #  asks for the player's name
 while len(user1) <= 1: # the loop requires to ask the name of the player
     print ("Merci d'entrer un prénom valide ")
@@ -38,33 +36,26 @@ while score_user1 < 3 and score_computer < 3:
         print("Match Nul")
 
     elif player == "pierre" and computer == "feuille":
-        print("Le pc gagne")
         score_computer = score_computer + 1
         print("Tu as {}, et le pc a {}".format(score_user1, score_computer))
 
     elif player == "feuille" and computer == "pierre":
-        print("Tu as gagné :-)")
         score_user1 = score_user1 + 1
         print("Tu as {}, et le pc a {}".format(score_user1, score_computer))
 
     elif player == "ciseaux" and computer == "pierre":
-        print("Le pc gagne")
         score_computer = score_computer + 1
         print("Tu as {}, et le pc a {}".format(score_user1, score_computer))
 
     elif player == "pierre" and computer == "ciseaux":
-        print("Tu as gagné :-)")
         score_user1 = score_user1 + 1 
         print("Tu as {}, et le pc a {}".format(score_user1, score_computer))
 
     elif player == "feuille" and computer == "ciseaux":
-        print("Le pc gagne")
         score_computer = score_computer + 1
         print("Tu as {}, et le pc a {}".format(score_user1, score_computer))
 
-
     elif player == "ciseaux" and computer == "feuille":
-        print("Tu as gagné :-)")
         score_user1 = score_user1 + 1
         print("Tu as {}, et le pc a {}".format(score_user1, score_computer))
 
