@@ -16,8 +16,10 @@ score_user1 = 0
 score_computer = 0
 while score_user1 < 3 and score_computer < 3:
     player = input("Veuillez choisir entre pierre, feuille ou ciseaux ").lower() #player makes his choice)
+    while player not in ("pierre", "feuille", "ciseaux"):
+        print("Merci de noter la bonne valeur")
+        player = input("Veuillez choisir entre pierre, feuille ou ciseaux ").lower()
     print(player,"VS", end=" ")
-
     chosen = randint(1,3)
 
     if chosen == 1:
