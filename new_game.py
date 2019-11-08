@@ -10,7 +10,7 @@ user1 = input("Veuillez entrer votre prénom ").upper() #  asks for the player's
 while len(user1) <= 1: # the loop requires to ask the name of the player
     print ("Merci d'entrer un prénom valide ")
     user1 = input("Veuillez entrer votre prénom ")
-print ("Bonjour", user1, "je te souhaite bon chance")
+print ("Bonjour {} je te souhaite bon chance".format(user1))
 
 player = input("Veuillez choisir entre pierre, feuille ou ciseaux ").lower() #player makes his choice)
 print(player,"VS", end=" ")
@@ -29,20 +29,47 @@ else:
     computer = "pierre"
     print("pierre")
 
+score_user1 = 0
+score_computer = 0
+
 if player == computer:
     print("Match Nul")
 
 elif player == "pierre" and computer == "feuille":
     print("Le pc gagne")
+    score_computer = score_computer + 1
+    print("Tu as {}, et le pc a {}".format(score_user1, score_computer))
 
 elif player == "feuille" and computer == "pierre":
     print("Tu as gagné :-)")
+    score_user1 = score_user1 + 1
+    print("Tu as {}, et le pc a {}".format(score_user1, score_computer))
 
 elif player == "ciseaux" and computer == "pierre":
     print("Le pc gagne")
+    score_computer = score_computer + 1
+    print("Tu as {}, et le pc a {}".format(score_user1, score_computer))
 
 elif player == "pierre" and computer == "ciseaux":
     print("Tu as gagné :-)")
+    score_user1 = score_user1 + 1 
+    print("Tu as {}, et le pc a {}".format(score_user1, score_computer))
+
+elif player == "feuille" and computer == "ciseaux":
+    print("Le pc gagne")
+    score_computer = score_computer + 1
+    print("Tu as {}, et le pc a {}".format(score_user1, score_computer))
+
+
+elif player == "ciseaux" and computer == "feuille":
+    print("Tu as gagné :-)")
+    score_user1 = score_user1 + 1
+    print("Tu as {}, et le pc a {}".format(score_user1, score_computer))
+
+
+
+
+
 
 
 
