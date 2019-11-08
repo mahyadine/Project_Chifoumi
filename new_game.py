@@ -29,5 +29,21 @@ else:
     computer = "pierre"
     print("pierre")
 
+if player == computer:
+    print("Match Nul")
+
+elif player == "pierre" and computer == "feuille":
+    print("Le pc gagne")
+
+elif player == "feuille" and computer == "pierre":
+    print("Tu as gagné :-)")
+
+elif player == "ciseaux" and computer == "pierre":
+    print("Le pc gagne")
+
+elif player == "pierre" and computer == "ciseaux":
+    print("Tu as gagné :-)")
+
+
 
 
