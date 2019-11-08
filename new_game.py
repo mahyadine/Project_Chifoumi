@@ -12,59 +12,59 @@ while len(user1) <= 1: # the loop requires to ask the name of the player
     user1 = input("Veuillez entrer votre prénom ")
 print ("Bonjour {} je te souhaite bon chance".format(user1))
 
-player = input("Veuillez choisir entre pierre, feuille ou ciseaux ").lower() #player makes his choice)
-print(player,"VS", end=" ")
-
-chosen = randint(1,3)
-
-if chosen == 1:
-    computer = "feuille"
-    print("feuille")
-
-elif chosen == 2:
-    computer = "ciseaux"
-    print("ciseaux")
-
-else:
-    computer = "pierre"
-    print("pierre")
-
 score_user1 = 0
 score_computer = 0
+while score_user1 < 3 and score_computer < 3:
+    player = input("Veuillez choisir entre pierre, feuille ou ciseaux ").lower() #player makes his choice)
+    print(player,"VS", end=" ")
 
-if player == computer:
-    print("Match Nul")
+    chosen = randint(1,3)
 
-elif player == "pierre" and computer == "feuille":
-    print("Le pc gagne")
-    score_computer = score_computer + 1
-    print("Tu as {}, et le pc a {}".format(score_user1, score_computer))
+    if chosen == 1:
+        computer = "feuille"
+        print("feuille")
 
-elif player == "feuille" and computer == "pierre":
-    print("Tu as gagné :-)")
-    score_user1 = score_user1 + 1
-    print("Tu as {}, et le pc a {}".format(score_user1, score_computer))
+    elif chosen == 2:
+        computer = "ciseaux"
+        print("ciseaux")
 
-elif player == "ciseaux" and computer == "pierre":
-    print("Le pc gagne")
-    score_computer = score_computer + 1
-    print("Tu as {}, et le pc a {}".format(score_user1, score_computer))
+    else:
+        computer = "pierre"
+        print("pierre")
 
-elif player == "pierre" and computer == "ciseaux":
-    print("Tu as gagné :-)")
-    score_user1 = score_user1 + 1 
-    print("Tu as {}, et le pc a {}".format(score_user1, score_computer))
+    if player == computer:
+        print("Match Nul")
 
-elif player == "feuille" and computer == "ciseaux":
-    print("Le pc gagne")
-    score_computer = score_computer + 1
-    print("Tu as {}, et le pc a {}".format(score_user1, score_computer))
+    elif player == "pierre" and computer == "feuille":
+        print("Le pc gagne")
+        score_computer = score_computer + 1
+        print("Tu as {}, et le pc a {}".format(score_user1, score_computer))
+
+    elif player == "feuille" and computer == "pierre":
+        print("Tu as gagné :-)")
+        score_user1 = score_user1 + 1
+        print("Tu as {}, et le pc a {}".format(score_user1, score_computer))
+
+    elif player == "ciseaux" and computer == "pierre":
+        print("Le pc gagne")
+        score_computer = score_computer + 1
+        print("Tu as {}, et le pc a {}".format(score_user1, score_computer))
+
+    elif player == "pierre" and computer == "ciseaux":
+        print("Tu as gagné :-)")
+        score_user1 = score_user1 + 1 
+        print("Tu as {}, et le pc a {}".format(score_user1, score_computer))
+
+    elif player == "feuille" and computer == "ciseaux":
+        print("Le pc gagne")
+        score_computer = score_computer + 1
+        print("Tu as {}, et le pc a {}".format(score_user1, score_computer))
 
 
-elif player == "ciseaux" and computer == "feuille":
-    print("Tu as gagné :-)")
-    score_user1 = score_user1 + 1
-    print("Tu as {}, et le pc a {}".format(score_user1, score_computer))
+    elif player == "ciseaux" and computer == "feuille":
+        print("Tu as gagné :-)")
+        score_user1 = score_user1 + 1
+        print("Tu as {}, et le pc a {}".format(score_user1, score_computer))
 
 
 
