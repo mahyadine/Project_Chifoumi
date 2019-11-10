@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*- #display accents
 from random import randint #Allows the generation of random numbers
-import os
-import sys
+import os #The OS module in Python provides a way of using operating system dependentfunctionality.
+import sys #The sys module provides functions and variables used to manipulate different parts of the Python runtime environment
 
 print ("----------------------Welcome Chifoumi Game-----------------------------\n-----------------------Hello how are you--------------------------------")
 print ("La régle du jeu est simple:\n- La pierre bat les ciseaux\n- La feuille bat la pierre\n- Les ciseaux battent la feuille")
 
-def shifoumi():
+def shifoumi(): #creation of the function
     user1 = input("Veuillez entrer votre prénom ").upper() #  asks for the player's name
     while len(user1) <= 1: # the loop requires to ask the name of the player
         print ("Merci d'entrer un prénom valide ")
@@ -22,7 +22,7 @@ def shifoumi():
             player = input("Veuillez choisir entre pierre, feuille ou ciseaux ").lower()
         print(player,"VS", end=" ")
         
-        chosen = randint(1,3)
+        chosen = randint(1,3) #The choice of pc
         if chosen == 1:
             computer = "feuille"
             print("feuille")
